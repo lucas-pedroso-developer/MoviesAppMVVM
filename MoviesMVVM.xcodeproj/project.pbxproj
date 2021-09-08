@@ -26,6 +26,7 @@
 		6AC622ED26E9205500DC48E3 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622EC26E9205500DC48E3 /* HttpError.swift */; };
 		6AC622F226E9206700DC48E3 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622F126E9206700DC48E3 /* Http.swift */; };
 		6AC622F726E920E900DC48E3 /* HttpGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622F626E920E900DC48E3 /* HttpGet.swift */; };
+		6AC6230526E9220300DC48E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6230426E9220300DC48E3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		6AC622EC26E9205500DC48E3 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		6AC622F126E9206700DC48E3 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		6AC622F626E920E900DC48E3 /* HttpGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGet.swift; sourceTree = "<group>"; };
+		6AC6230426E9220300DC48E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		6AC622EB26E9203F00DC48E3 /* Http */ = {
 			isa = PBXGroup;
 			children = (
+				6AC6230326E921F600DC48E3 /* Constants */,
 				6AC622FD26E9211300DC48E3 /* Service */,
 				6AC622FB26E9210500DC48E3 /* Protocol */,
 				6AC622FC26E9210C00DC48E3 /* Error */,
@@ -229,6 +232,14 @@
 				6AC6228426E9177E00DC48E3 /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6AC6230326E921F600DC48E3 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				6AC6230426E9220300DC48E3 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,6 +387,7 @@
 				6AC622C526E91E4D00DC48E3 /* Link.swift in Sources */,
 				6AC622F226E9206700DC48E3 /* Http.swift in Sources */,
 				6AC622B826E91E2D00DC48E3 /* Movies.swift in Sources */,
+				6AC6230526E9220300DC48E3 /* Constants.swift in Sources */,
 				6AC6228926E9177E00DC48E3 /* MoviesMVVM.xcdatamodeld in Sources */,
 				6AC6228326E9177E00DC48E3 /* ViewController.swift in Sources */,
 				6AC6227F26E9177E00DC48E3 /* AppDelegate.swift in Sources */,
