@@ -125,6 +125,7 @@
 		6AC6227D26E9177E00DC48E3 /* MoviesMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				6AC6230326E921F600DC48E3 /* Constants */,
 				6AC6230C26E9225E00DC48E3 /* Extension */,
 				6AC622EB26E9203F00DC48E3 /* Http */,
 				6AC622B626E91E0300DC48E3 /* View */,
@@ -188,7 +189,6 @@
 		6AC622EB26E9203F00DC48E3 /* Http */ = {
 			isa = PBXGroup;
 			children = (
-				6AC6230326E921F600DC48E3 /* Constants */,
 				6AC622FD26E9211300DC48E3 /* Service */,
 				6AC622FB26E9210500DC48E3 /* Protocol */,
 				6AC622FC26E9210C00DC48E3 /* Error */,
