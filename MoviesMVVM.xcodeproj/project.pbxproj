@@ -27,6 +27,7 @@
 		6AC622F226E9206700DC48E3 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622F126E9206700DC48E3 /* Http.swift */; };
 		6AC622F726E920E900DC48E3 /* HttpGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622F626E920E900DC48E3 /* HttpGet.swift */; };
 		6AC6230526E9220300DC48E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6230426E9220300DC48E3 /* Constants.swift */; };
+		6AC6230E26E9226F00DC48E3 /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6230D26E9226F00DC48E3 /* DataExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		6AC622F126E9206700DC48E3 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		6AC622F626E920E900DC48E3 /* HttpGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGet.swift; sourceTree = "<group>"; };
 		6AC6230426E9220300DC48E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6AC6230D26E9226F00DC48E3 /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		6AC6227D26E9177E00DC48E3 /* MoviesMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				6AC6230C26E9225E00DC48E3 /* Extension */,
 				6AC622EB26E9203F00DC48E3 /* Http */,
 				6AC622B626E91E0300DC48E3 /* View */,
 				6AC622B526E91DFC00DC48E3 /* ViewModel */,
@@ -240,6 +243,14 @@
 				6AC6230426E9220300DC48E3 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		6AC6230C26E9225E00DC48E3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6AC6230D26E9226F00DC48E3 /* DataExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 				6AC6228926E9177E00DC48E3 /* MoviesMVVM.xcdatamodeld in Sources */,
 				6AC6228326E9177E00DC48E3 /* ViewController.swift in Sources */,
 				6AC6227F26E9177E00DC48E3 /* AppDelegate.swift in Sources */,
+				6AC6230E26E9226F00DC48E3 /* DataExtension.swift in Sources */,
 				6AC622CA26E91E6300DC48E3 /* Multimedia.swift in Sources */,
 				6AC6228126E9177E00DC48E3 /* SceneDelegate.swift in Sources */,
 			);
