@@ -22,6 +22,7 @@
 		6AC622CA26E91E6300DC48E3 /* Multimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622C926E91E6300DC48E3 /* Multimedia.swift */; };
 		6AC622CF26E91E7400DC48E3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622CE26E91E7400DC48E3 /* Model.swift */; };
 		6AC622E126E91F5F00DC48E3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC622E026E91F5F00DC48E3 /* Alamofire */; };
+		6AC622E726E9201F00DC48E3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC622E626E9201F00DC48E3 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC622E726E9201F00DC48E3 /* Kingfisher in Frameworks */,
 				6AC622E126E91F5F00DC48E3 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +192,7 @@
 			name = MoviesMVVM;
 			packageProductDependencies = (
 				6AC622E026E91F5F00DC48E3 /* Alamofire */,
+				6AC622E626E9201F00DC48E3 /* Kingfisher */,
 			);
 			productName = MoviesMVVM;
 			productReference = 6AC6227B26E9177E00DC48E3 /* MoviesMVVM.app */;
@@ -264,6 +267,7 @@
 			mainGroup = 6AC6227226E9177E00DC48E3;
 			packageReferences = (
 				6AC622DF26E91F5F00DC48E3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6AC622E526E9201F00DC48E3 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 6AC6227C26E9177E00DC48E3 /* Products */;
 			projectDirPath = "";
@@ -659,6 +663,14 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		6AC622E526E9201F00DC48E3 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -666,6 +678,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6AC622DF26E91F5F00DC48E3 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		6AC622E626E9201F00DC48E3 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AC622E526E9201F00DC48E3 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 
