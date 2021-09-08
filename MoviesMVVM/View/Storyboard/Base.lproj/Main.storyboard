@@ -34,7 +34,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lAY-cD-w52">
-                                <rect key="frame" x="19" y="98" width="337.5" height="565"/>
+                                <rect key="frame" x="19" y="98" width="337.5" height="516"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uJN-QE-JmZ">
                                     <size key="itemSize" width="128" height="128"/>
@@ -107,6 +107,23 @@
                     <tabBarItem key="tabBarItem" title="Movies" image="square.grid.3x2.fill" catalog="system" id="KQM-Ew-rg3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mc-8f-0g8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719.20000000000005" y="143.47826086956522"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Y4Y-SI-6dT">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1ft-cN-pyF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oAK-Kb-MnD">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jwH-bj-Ijh" kind="relationship" relationship="viewControllers" id="gpe-nY-nxq"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fez-DE-G9T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-220" y="143.47826086956522"/>
         </scene>
