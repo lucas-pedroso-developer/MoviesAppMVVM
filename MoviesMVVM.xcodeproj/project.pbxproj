@@ -23,6 +23,9 @@
 		6AC622CF26E91E7400DC48E3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622CE26E91E7400DC48E3 /* Model.swift */; };
 		6AC622E126E91F5F00DC48E3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC622E026E91F5F00DC48E3 /* Alamofire */; };
 		6AC622E726E9201F00DC48E3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6AC622E626E9201F00DC48E3 /* Kingfisher */; };
+		6AC622ED26E9205500DC48E3 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622EC26E9205500DC48E3 /* HttpError.swift */; };
+		6AC622F226E9206700DC48E3 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622F126E9206700DC48E3 /* Http.swift */; };
+		6AC622F726E920E900DC48E3 /* HttpGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC622F626E920E900DC48E3 /* HttpGet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		6AC622C426E91E4D00DC48E3 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		6AC622C926E91E6300DC48E3 /* Multimedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multimedia.swift; sourceTree = "<group>"; };
 		6AC622CE26E91E7400DC48E3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6AC622EC26E9205500DC48E3 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		6AC622F126E9206700DC48E3 /* Http.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		6AC622F626E920E900DC48E3 /* HttpGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 		6AC6227D26E9177E00DC48E3 /* MoviesMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				6AC622EB26E9203F00DC48E3 /* Http */,
 				6AC622B626E91E0300DC48E3 /* View */,
 				6AC622B526E91DFC00DC48E3 /* ViewModel */,
 				6AC622B426E91DF600DC48E3 /* Model */,
@@ -167,11 +174,61 @@
 		6AC622B626E91E0300DC48E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6AC6228226E9177E00DC48E3 /* ViewController.swift */,
-				6AC6228426E9177E00DC48E3 /* Main.storyboard */,
-				6AC6228C26E9178000DC48E3 /* LaunchScreen.storyboard */,
+				6AC622FF26E9212B00DC48E3 /* Storyboard */,
+				6AC622FE26E9212300DC48E3 /* ViewController */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6AC622EB26E9203F00DC48E3 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				6AC622FD26E9211300DC48E3 /* Service */,
+				6AC622FB26E9210500DC48E3 /* Protocol */,
+				6AC622FC26E9210C00DC48E3 /* Error */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		6AC622FB26E9210500DC48E3 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				6AC622F626E920E900DC48E3 /* HttpGet.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		6AC622FC26E9210C00DC48E3 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				6AC622EC26E9205500DC48E3 /* HttpError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		6AC622FD26E9211300DC48E3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6AC622F126E9206700DC48E3 /* Http.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6AC622FE26E9212300DC48E3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6AC6228226E9177E00DC48E3 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6AC622FF26E9212B00DC48E3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6AC6228C26E9178000DC48E3 /* LaunchScreen.storyboard */,
+				6AC6228426E9177E00DC48E3 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,9 +369,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC622F726E920E900DC48E3 /* HttpGet.swift in Sources */,
 				6AC622CF26E91E7400DC48E3 /* Model.swift in Sources */,
 				6AC622C026E91E3E00DC48E3 /* Results.swift in Sources */,
+				6AC622ED26E9205500DC48E3 /* HttpError.swift in Sources */,
 				6AC622C526E91E4D00DC48E3 /* Link.swift in Sources */,
+				6AC622F226E9206700DC48E3 /* Http.swift in Sources */,
 				6AC622B826E91E2D00DC48E3 /* Movies.swift in Sources */,
 				6AC6228926E9177E00DC48E3 /* MoviesMVVM.xcdatamodeld in Sources */,
 				6AC6228326E9177E00DC48E3 /* ViewController.swift in Sources */,
