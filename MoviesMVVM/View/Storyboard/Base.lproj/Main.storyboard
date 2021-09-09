@@ -85,8 +85,16 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="110" height="128"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="wGj-ID-H3P" id="fYu-DW-9eQ"/>
+                                            <outlet property="label" destination="Jgf-NX-PT7" id="yJc-lw-Rwp"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="jwH-bj-Ijh" id="9jn-49-EV9"/>
+                                    <outlet property="delegate" destination="jwH-bj-Ijh" id="Ydt-4S-9Ha"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SBy-XU-6RG"/>
@@ -105,6 +113,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Movies" image="square.grid.3x2.fill" catalog="system" id="KQM-Ew-rg3"/>
+                    <connections>
+                        <outlet property="collectionView" destination="lAY-cD-w52" id="ouM-Qr-sAh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mc-8f-0g8" sceneMemberID="firstResponder"/>
             </objects>

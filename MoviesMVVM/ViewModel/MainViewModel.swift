@@ -21,10 +21,14 @@ public class MainViewModel {
         http.get(url: url) { result in
             switch result {
             case .success(let data):
-                if data != nil {
-                    self.movies = data?.toModel()
+                do {
+                    guard let data = data else { return }
+                    self.movies = try JSONDecoder().decode(Movies.self, from: data)
+                    print(self.movies?.results?.count)
                     self.delegate?.fetch()
-                } 
+                } catch(let error) {
+                    print(error.localizedDescription)
+                }
             case .failure(let error):
                 print(error)
             }
@@ -32,3 +36,4 @@ public class MainViewModel {
     }
     
 }
+
