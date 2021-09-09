@@ -37,7 +37,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if viewModel.nextPage(indexPath: indexPath) {
             viewModel.page += 1
             viewModel.getmovies(url: "\(Constants.BASE_URL)\(Constants.API_KEY)&page=\(viewModel.page)")
