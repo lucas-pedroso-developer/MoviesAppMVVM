@@ -13,6 +13,10 @@ public class MainViewModel {
     let http = Http()
     var delegate: MainProtocol?
             
+    init() {
+        
+    }
+    
     func fetch() {
         self.getmovies(url: "\(Constants.BASE_URL)\(Constants.API_KEY)")
     }
@@ -23,9 +27,8 @@ public class MainViewModel {
             case .success(let data):
                 do {
                     guard let data = data else { return }
-                    self.movies = try JSONDecoder().decode(Movies.self, from: data)
-                    print(self.movies?.results?.count)
-                    self.delegate?.fetch()
+                    self.movies = try JSONDecoder().decode(Movies.self, from: data)                    
+                    self.delegate?.reload()
                 } catch(let error) {
                     print(error.localizedDescription)
                 }

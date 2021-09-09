@@ -8,6 +8,6 @@
 import Foundation
 
 class Constants {
-    static let API_KEY = "9c533054f3463670421676bacdb1966b"
-    static let BASE_URL = "https://api.themoviedb.org/3/movie/now_playing?api_key="// + API_KEY
+    static let API_KEY = "9c533054f3463670421676bacdb1966b"    
+    static let BASE_URL = "https://api.themoviedb.org/3/movie/popular?api_key="// + API_KEY
 }

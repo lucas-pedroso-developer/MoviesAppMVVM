@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol MainProtocol {
-    func fetch()
+    func reload()
 }
     
 

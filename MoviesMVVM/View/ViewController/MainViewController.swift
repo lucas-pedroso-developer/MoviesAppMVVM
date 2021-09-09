@@ -16,28 +16,19 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         viewModel.fetch()
-    }
-
-
-}
-
-extension MainViewController: MainProtocol {
-    func fetch() {
-        collectionView.reloadData()
     }
 }
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(viewModel.movies?.results?.count)
         return viewModel.movies?.results?.count ?? 0
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding: CGFloat =  50
-        let collectionViewSize = collectionView.frame.size.width //- padding
+        let collectionViewSize = collectionView.frame.size.width
         return CGSize(width: collectionViewSize/2.1, height: collectionViewSize/2.1)
     }
         
@@ -48,18 +39,23 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         if let name = viewModel.movies?.results?[indexPath.item].title {
             cell.label.text = name
         }
-        if let url = viewModel.movies?.results?[indexPath.item].backdrop_path {
-            if let imageUrl = URL(string: url) {
-                cell.imageView.kf.setImage(with: imageUrl)
+        
+        if let backdrop_path = viewModel.movies?.results?[indexPath.item].backdrop_path {
+            if let url = URL(string: "https://image.tmdb.org/t/p/w500" + backdrop_path) {
+                cell.imageView.kf.setImage(with: url)
             }
         }
+        
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
                         
         return cell
     }
-    
-    
+}
 
+extension MainViewController: MainProtocol {
+    func reload() {
+        collectionView.reloadData()
+    }
 }
