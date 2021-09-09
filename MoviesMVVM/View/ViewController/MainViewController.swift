@@ -28,28 +28,12 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
         
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let collectionViewSize = collectionView.frame.size.width
-        return CGSize(width: collectionViewSize/2.1, height: collectionViewSize/2.1)
+        return CGSize(width: collectionView.frame.size.width/2.1, height: collectionView.frame.size.width/2.1)
     }
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:  "cell", for: indexPath as IndexPath) as! MoviesCollectionViewCell
-        
-        if let name = viewModel.movies?.results?[indexPath.item].title {
-            cell.label.text = name
-        }
-        
-        if let backdrop_path = viewModel.movies?.results?[indexPath.item].backdrop_path {
-            if let url = URL(string: "https://image.tmdb.org/t/p/w500" + backdrop_path) {
-                cell.imageView.kf.setImage(with: url)
-            }
-        }
-        
-        cell.layer.borderColor = UIColor.black.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
-                        
+        cell.setup(name: viewModel.movies?.results?[indexPath.item].title, imageURL: viewModel.movies?.results?[indexPath.item].backdrop_path)
         return cell
     }
 }
