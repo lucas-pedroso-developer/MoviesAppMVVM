@@ -36,6 +36,13 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         cell.setup(name: viewModel.movies?.results?[indexPath.item].title, imageURL: viewModel.movies?.results?[indexPath.item].backdrop_path)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {        
+        if viewModel.nextPage(indexPath: indexPath) {
+            viewModel.page += 1
+            viewModel.getmovies(url: "\(Constants.BASE_URL)\(Constants.API_KEY)&page=\(viewModel.page)")
+        }
+    }
 }
 
 extension MainViewController: MainProtocol {
