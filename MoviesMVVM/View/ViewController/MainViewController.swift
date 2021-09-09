@@ -37,6 +37,14 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Detail", bundle: nil)
+        let newViewController = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        newViewController.movieDetail = viewModel.movies?.results?[indexPath.item]
+        newViewController.modalPresentationStyle = .fullScreen
+        present(newViewController, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if viewModel.nextPage(indexPath: indexPath) {
             viewModel.page += 1
@@ -50,3 +58,4 @@ extension MainViewController: MainProtocol {
         collectionView.reloadData()
     }
 }
+
