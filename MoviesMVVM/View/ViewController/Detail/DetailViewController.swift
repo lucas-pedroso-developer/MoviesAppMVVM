@@ -21,26 +21,21 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fillFields()
+        viewModel.fillFields()
     }
-    
-    private func fillFields() {
+}
+
+extension DetailViewController: DetailProtocol {
+    func fillFields() {
         if let movieName = self.movieDetail?.title {
             self.movieNameLabel.text = movieName
-        } else {
-            self.movieNameLabel.text = "No name"
         }
-        
         if let movieDescription = self.movieDetail?.overview {
             self.movieDescriptionTextView.text = movieDescription
-        } else {
-            self.movieDescriptionTextView.text = "No description"
         }
                         
         if let publicationDate = self.movieDetail?.release_date {
             self.publicationDate.text = "Publication Date: \(publicationDate)"
-        } else {
-            self.movieDescriptionTextView.text = "No date"
         }
         
         if let backdrop_path = self.movieDetail?.backdrop_path {

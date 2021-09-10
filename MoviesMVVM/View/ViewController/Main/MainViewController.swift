@@ -57,5 +57,9 @@ extension MainViewController: MainProtocol {
     func reload() {
         collectionView.reloadData()
     }
+    
+    func showError(error: String) {
+        self.showAlert(title: "Erro", message: error)
+    }
 }
 

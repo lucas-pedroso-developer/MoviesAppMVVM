@@ -39,7 +39,7 @@ public class MainViewModel {
                     }
                     self.delegate?.reload()
                 } catch(let error) {
-                    print(error.localizedDescription)
+                    self.delegate?.showError(error: error.localizedDescription)
                 }
             case .failure(let error):
                 print(error)

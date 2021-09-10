@@ -8,11 +8,9 @@
 import Foundation
 import UIKit
 
-class FavoriteMovieViewController: UIViewController {
+class FavoriteMovieViewController: UIViewController {        
     
-    var favoriteMovie: [FavoriteMovie]?
-    var stack = CoreDataStack.shared
-    let handleFavoriteMovie = HandleFavoriteMovie()
+    var viewModel = FavoritemovieViewModel()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,27 +24,6 @@ class FavoriteMovieViewController: UIViewController {
         self.loadAllFavoriteMovies()
         self.tableView.reloadData()
     }
-    
-    private func loadAllFavoriteMovies() -> [FavoriteMovie]? {
-        var favoriteMovie: [FavoriteMovie]?
-        do {
-            try favoriteMovie = handleFavoriteMovie.fetchAllFavoriteMovies(entityName: FavoriteMovie.name, viewContext: stack.viewContext)
-        } catch {
-            return nil
-        }
-        return favoriteMovie
-    }
-    
-    private func deleteFavoriteMovies(index: Int) -> Bool {
-        do {
-            return try handleFavoriteMovie.deleteFavoriteMovie(index: index, entityName: FavoriteMovie.name, viewContext: stack.viewContext)
-        } catch {
-            print("erro")
-        }
-        return false
-    }
-
-    
 }
 
 extension FavoriteMovieViewController: UITableViewDelegate, UITableViewDataSource {

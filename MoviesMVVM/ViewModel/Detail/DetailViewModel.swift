@@ -9,7 +9,7 @@ import Foundation
 
 class DetailViewModel {
     
-    
+    var delegate: DetailProtocol?
     var stack = CoreDataStack.shared
         
     init() {
@@ -28,6 +28,10 @@ class DetailViewModel {
         } catch {
             print("error")
         }
+    }
+    
+    func setFieldsData() {
+        delegate?.fillFields()
     }
     
 }

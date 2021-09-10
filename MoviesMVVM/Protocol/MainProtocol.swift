@@ -9,6 +9,7 @@ import Foundation
 
 public protocol MainProtocol {
     func reload()
+    func showError(error: String)
 }
     
 
