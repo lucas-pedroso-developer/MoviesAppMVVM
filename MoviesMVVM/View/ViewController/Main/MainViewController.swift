@@ -18,7 +18,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.fetch()
-        loadAllFavoriteMovies()
     }    
 }
 
