@@ -21,7 +21,8 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fillFields()
+        viewModel.delegate = self
+        viewModel.setFieldsData()
     }
 }
 

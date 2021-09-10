@@ -25,6 +25,7 @@
 		6A98EE9426EB937B00CA0250 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98EE9326EB937B00CA0250 /* UIViewControllerExtension.swift */; };
 		6A98EE9D26EBC5B700CA0250 /* FavoriteMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98EE9C26EBC5B700CA0250 /* FavoriteMovieViewModel.swift */; };
 		6A98EEA526EBC8C600CA0250 /* DetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98EEA426EBC8C600CA0250 /* DetailProtocol.swift */; };
+		6A98EEAD26EBCC5600CA0250 /* FavoriteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98EEAC26EBCC5600CA0250 /* FavoriteProtocol.swift */; };
 		6AC6227F26E9177E00DC48E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6227E26E9177E00DC48E3 /* AppDelegate.swift */; };
 		6AC6228126E9177E00DC48E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6228026E9177E00DC48E3 /* SceneDelegate.swift */; };
 		6AC6228326E9177E00DC48E3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC6228226E9177E00DC48E3 /* MainViewController.swift */; };
@@ -81,6 +82,7 @@
 		6A98EE9326EB937B00CA0250 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		6A98EE9C26EBC5B700CA0250 /* FavoriteMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMovieViewModel.swift; sourceTree = "<group>"; };
 		6A98EEA426EBC8C600CA0250 /* DetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocol.swift; sourceTree = "<group>"; };
+		6A98EEAC26EBCC5600CA0250 /* FavoriteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocol.swift; sourceTree = "<group>"; };
 		6AC6227B26E9177E00DC48E3 /* MoviesMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC6227E26E9177E00DC48E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AC6228026E9177E00DC48E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				6A98EE1D26EA255600CA0250 /* MainProtocol.swift */,
 				6A98EEA426EBC8C600CA0250 /* DetailProtocol.swift */,
+				6A98EEAC26EBCC5600CA0250 /* FavoriteProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				6A98EE3926EA465300CA0250 /* Result.swift in Sources */,
 				6A98EE4326EA847500CA0250 /* DetailViewController.swift in Sources */,
 				6AC6231926E934F000DC48E3 /* MainViewModel.swift in Sources */,
+				6A98EEAD26EBCC5600CA0250 /* FavoriteProtocol.swift in Sources */,
 				6A98EE8026EB81EB00CA0250 /* FavoriteMovieViewController.swift in Sources */,
 				6AC622F226E9206700DC48E3 /* Http.swift in Sources */,
 				6A98EE7026EA9F8300CA0250 /* FavoriteMovie+CoreDataProperties.swift in Sources */,

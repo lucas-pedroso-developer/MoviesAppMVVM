@@ -11,23 +11,26 @@ public class FavoritemovieViewModel {
     
     var favoriteMovie: [FavoriteMovie]?
     var stack = CoreDataStack.shared
+    var delegate: FavoriteProtocol?
+    
     let handleFavoriteMovie = HandleFavoriteMovie()
+    
 
-    private func loadAllFavoriteMovies() -> [FavoriteMovie]? {
-        var favoriteMovie: [FavoriteMovie]?
+    func loadAllFavoriteMovies() {
         do {
             try favoriteMovie = handleFavoriteMovie.fetchAllFavoriteMovies(entityName: FavoriteMovie.name, viewContext: stack.viewContext)
-        } catch {
-            return nil
+            delegate?.load()
+        } catch(let error) {
+            delegate?.showError(error: error.localizedDescription)
         }
-        return favoriteMovie
     }
     
-    private func deleteFavoriteMovies(index: Int) -> Bool {
+    func deleteFavoriteMovies(index: Int) -> Bool {
         do {
             return try handleFavoriteMovie.deleteFavoriteMovie(index: index, entityName: FavoriteMovie.name, viewContext: stack.viewContext)
+            delegate?.load()
         } catch {
-            print("erro")
+            delegate?.showError(error: error.localizedDescription)
         }
         return false
     }
