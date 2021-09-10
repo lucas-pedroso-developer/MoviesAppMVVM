@@ -19,10 +19,17 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var publicationDate: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupFavoriteButton()
         viewModel.delegate = self
         viewModel.setFieldsData()
+    }
+    
+    func setupFavoriteButton() {
+        let screenHeight = UIScreen.main.bounds.height
+        favoriteButton.layer.cornerRadius = screenHeight*0.07/2
     }
 }
 
@@ -36,7 +43,7 @@ extension DetailViewController: DetailProtocol {
         }
                         
         if let publicationDate = self.movieDetail?.release_date {
-            self.publicationDate.text = "Publication Date: \(publicationDate)"
+            self.publicationDate.text = "Data da Publicação: \(publicationDate)"
         }
         
         if let backdrop_path = self.movieDetail?.backdrop_path {
