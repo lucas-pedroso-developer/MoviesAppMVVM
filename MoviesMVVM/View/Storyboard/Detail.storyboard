@@ -36,8 +36,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-image" translatesAutoresizingMaskIntoConstraints="NO" id="ix1-ko-tNj">
                                 <rect key="frame" x="9.5" y="102" width="356" height="233.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MF1-bL-YB1">
-                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="No name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MF1-bL-YB1">
+                                <rect key="frame" x="0.0" y="48" width="375" height="52"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,10 +85,10 @@
                             <constraint firstItem="MF1-bL-YB1" firstAttribute="leading" secondItem="hGh-gw-SDm" secondAttribute="leading" id="3uR-eu-5wI"/>
                             <constraint firstItem="ix1-ko-tNj" firstAttribute="width" secondItem="QqG-NW-yOQ" secondAttribute="width" multiplier="0.95" id="4dN-Kg-PGT"/>
                             <constraint firstItem="ds3-ju-TsX" firstAttribute="centerX" secondItem="ix1-ko-tNj" secondAttribute="centerX" id="6O5-AT-epY"/>
-                            <constraint firstItem="ix1-ko-tNj" firstAttribute="top" secondItem="MF1-bL-YB1" secondAttribute="bottom" constant="8" id="7ql-K1-Blh"/>
+                            <constraint firstItem="ix1-ko-tNj" firstAttribute="top" secondItem="MF1-bL-YB1" secondAttribute="bottom" constant="2" id="7ql-K1-Blh"/>
                             <constraint firstItem="ykM-zj-Erp" firstAttribute="top" secondItem="hGh-gw-SDm" secondAttribute="top" id="EG5-IP-Kls"/>
                             <constraint firstItem="KRr-MH-7Jo" firstAttribute="top" secondItem="J1h-YI-fV9" secondAttribute="bottom" constant="8" id="Eh2-E9-id3"/>
-                            <constraint firstItem="MF1-bL-YB1" firstAttribute="top" secondItem="ykM-zj-Erp" secondAttribute="bottom" constant="20" id="HCQ-a9-Cm1"/>
+                            <constraint firstItem="MF1-bL-YB1" firstAttribute="top" secondItem="ykM-zj-Erp" secondAttribute="bottom" constant="4" id="HCQ-a9-Cm1"/>
                             <constraint firstItem="ix1-ko-tNj" firstAttribute="centerX" secondItem="hGh-gw-SDm" secondAttribute="centerX" id="Le6-Nz-vNn"/>
                             <constraint firstItem="ds3-ju-TsX" firstAttribute="top" secondItem="QqG-NW-yOQ" secondAttribute="top" constant="386" id="MAA-WX-k5d"/>
                             <constraint firstItem="ds3-ju-TsX" firstAttribute="top" secondItem="e8c-oG-DvM" secondAttribute="bottom" constant="30.5" id="MvZ-1x-VXL"/>
