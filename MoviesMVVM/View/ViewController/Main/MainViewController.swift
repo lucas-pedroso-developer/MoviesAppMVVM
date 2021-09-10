@@ -10,7 +10,7 @@ import Kingfisher
 
 class MainViewController: UIViewController {
 
-    var viewModel = MainViewModel()
+    var viewModel = MainViewModel()    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -18,7 +18,8 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.fetch()
-    }
+        loadAllFavoriteMovies()
+    }    
 }
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
