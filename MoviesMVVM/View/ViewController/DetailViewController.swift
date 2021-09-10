@@ -11,6 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
         
     var movieDetail: MoviesResult?
+    var viewModel = DetailViewModel()
     
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieNameLabel: UILabel!
@@ -47,7 +48,7 @@ class DetailViewController: UIViewController {
                 self.movieImage.kf.setImage(with: url)
             }
         }
-    }    
+    }
 }
 
 extension DetailViewController {
@@ -56,6 +57,8 @@ extension DetailViewController {
     }
  
     @IBAction func favorite(_ sender: UIButton) {
-        
+        if let movie = movieDetail {
+            viewModel.saveFavoriteMovie(movieDetail: movie)
+        }
     }
 }
