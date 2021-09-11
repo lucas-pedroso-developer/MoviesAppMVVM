@@ -51,7 +51,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWH-Pf-8U6">
+                                                <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWH-Pf-8U6">
                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="128"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kingfisher-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wGj-ID-H3P">
@@ -89,6 +89,7 @@
                                         <connections>
                                             <outlet property="imageView" destination="wGj-ID-H3P" id="fYu-DW-9eQ"/>
                                             <outlet property="label" destination="Jgf-NX-PT7" id="yJc-lw-Rwp"/>
+                                            <outlet property="uiview" destination="aWH-Pf-8U6" id="TtS-t6-FKw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

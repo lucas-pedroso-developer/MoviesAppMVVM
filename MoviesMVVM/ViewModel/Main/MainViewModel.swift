@@ -21,28 +21,32 @@ public class MainViewModel {
     
     func fetch() {
         self.getmovies(url: "\(Constants.BASE_URL)\(Constants.API_KEY)")
-    }
+    }   
     
     public func getmovies(url: String) {
-        http.get(url: url) { result in
-            switch result {
-            case .success(let data):
-                do {
-                    guard let data = data else { return }
-                    let results = try JSONDecoder().decode(Movies.self, from: data)
-                    if self.movies == nil {
-                        self.movies = results
-                    } else {
-                        if let result = results.results {
-                            self.movies?.results?.append(contentsOf: result)
+        if !Connectivity.isConnectedToInternet {
+            delegate?.showError(error: "Sem Internet!")
+        } else {
+            http.get(url: url) { result in
+                switch result {
+                case .success(let data):
+                    do {
+                        guard let data = data else { return }
+                        let results = try JSONDecoder().decode(Movies.self, from: data)
+                        if self.movies == nil {
+                            self.movies = results
+                        } else {
+                            if let result = results.results {
+                                self.movies?.results?.append(contentsOf: result)
+                            }
                         }
+                        self.delegate?.reload()
+                    } catch(let error) {
+                        self.delegate?.showError(error: error.localizedDescription)
                     }
-                    self.delegate?.reload()
-                } catch(let error) {
-                    self.delegate?.showError(error: error.localizedDescription)
+                case .failure(let error):
+                    print(error)
                 }
-            case .failure(let error):
-                print(error)
             }
         }
     }

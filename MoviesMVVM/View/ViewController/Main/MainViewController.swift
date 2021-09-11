@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.fetch()
-    }    
+    }        
 }
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

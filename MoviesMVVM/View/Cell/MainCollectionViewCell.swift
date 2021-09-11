@@ -9,8 +9,10 @@ import Foundation
 import UIKit
 
 class MoviesCollectionViewCell: UICollectionViewCell {
+    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var uiview: UIView!
     
     func setup(name: String?, imageURL: String?) {
         if let name = name {
@@ -27,6 +29,7 @@ class MoviesCollectionViewCell: UICollectionViewCell {
         self.layer.borderColor = UIColor.black.cgColor
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 8
+        self.uiview.layer.cornerRadius = 4
     }
     
 }
