@@ -98,25 +98,40 @@
                                     <outlet property="delegate" destination="jwH-bj-Ijh" id="Ydt-4S-9Ha"/>
                                 </connections>
                             </collectionView>
+                            <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYn-jj-Oxc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="euU-tz-r4h">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SBy-XU-6RG"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zYn-jj-Oxc" firstAttribute="leading" secondItem="SBy-XU-6RG" secondAttribute="leading" id="3dQ-Ig-ag0"/>
+                            <constraint firstItem="euU-tz-r4h" firstAttribute="centerY" secondItem="zYn-jj-Oxc" secondAttribute="centerY" id="CPd-hY-4U4"/>
                             <constraint firstItem="lAY-cD-w52" firstAttribute="top" secondItem="F43-yP-sHJ" secondAttribute="bottom" constant="10" id="GUb-E9-7M4"/>
                             <constraint firstItem="RFB-V3-jnG" firstAttribute="trailing" secondItem="SBy-XU-6RG" secondAttribute="trailing" id="HaP-zN-HRk"/>
+                            <constraint firstItem="zYn-jj-Oxc" firstAttribute="top" secondItem="SBy-XU-6RG" secondAttribute="top" id="Lzj-Oa-Icd"/>
                             <constraint firstItem="F43-yP-sHJ" firstAttribute="leading" secondItem="SBy-XU-6RG" secondAttribute="leading" id="O4S-YZ-Lm8"/>
                             <constraint firstItem="RFB-V3-jnG" firstAttribute="leading" secondItem="SBy-XU-6RG" secondAttribute="leading" id="Pue-Tq-qbS"/>
                             <constraint firstItem="SBy-XU-6RG" firstAttribute="bottom" secondItem="lAY-cD-w52" secondAttribute="bottom" constant="4" id="VUv-yg-QZr"/>
+                            <constraint firstItem="zYn-jj-Oxc" firstAttribute="trailing" secondItem="SBy-XU-6RG" secondAttribute="trailing" id="XSZ-nJ-9l6"/>
                             <constraint firstItem="F43-yP-sHJ" firstAttribute="top" secondItem="RFB-V3-jnG" secondAttribute="bottom" id="Yg2-8I-3Hb"/>
                             <constraint firstItem="lAY-cD-w52" firstAttribute="centerX" secondItem="SBy-XU-6RG" secondAttribute="centerX" id="aEO-4B-PFk"/>
+                            <constraint firstAttribute="bottom" secondItem="zYn-jj-Oxc" secondAttribute="bottom" id="aOY-Tr-07x"/>
                             <constraint firstItem="F43-yP-sHJ" firstAttribute="trailing" secondItem="SBy-XU-6RG" secondAttribute="trailing" id="hE0-wB-Muo"/>
                             <constraint firstItem="RFB-V3-jnG" firstAttribute="top" secondItem="SBy-XU-6RG" secondAttribute="top" id="hUV-Fr-Jge"/>
                             <constraint firstItem="lAY-cD-w52" firstAttribute="width" secondItem="8Vq-Dk-fwf" secondAttribute="width" multiplier="0.9" id="nKJ-tc-ieF"/>
+                            <constraint firstItem="euU-tz-r4h" firstAttribute="centerX" secondItem="zYn-jj-Oxc" secondAttribute="centerX" id="yzr-xG-L0C"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Filmes" image="square.grid.3x2.fill" catalog="system" id="KQM-Ew-rg3"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="euU-tz-r4h" id="jE2-cM-qqA"/>
                         <outlet property="collectionView" destination="lAY-cD-w52" id="ouM-Qr-sAh"/>
+                        <outlet property="shadowView" destination="zYn-jj-Oxc" id="7yw-XJ-GHI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mc-8f-0g8" sceneMemberID="firstResponder"/>

@@ -13,12 +13,16 @@ class MainViewController: UIViewController {
     var viewModel = MainViewModel()    
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self
         viewModel.fetch()
-    }        
+    }
+    
+    
 }
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -60,6 +64,16 @@ extension MainViewController: MainProtocol {
     
     func showError(error: String) {
         self.showAlert(title: "Erro", message: error)
+    }
+    
+    func showHideLoading(show: Bool) {
+        if show {
+            shadowView.isHidden = false
+            activityIndicator.isHidden = false
+        } else {
+            shadowView.isHidden = true
+            activityIndicator.isHidden = true
+        }
     }
 }
 

@@ -27,6 +27,7 @@ public class MainViewModel {
         if !Connectivity.isConnectedToInternet {
             delegate?.showError(error: "Sem Internet!")
         } else {
+            delegate?.showHideLoading(show: true)
             http.get(url: url) { result in
                 switch result {
                 case .success(let data):
@@ -41,11 +42,14 @@ public class MainViewModel {
                             }
                         }
                         self.delegate?.reload()
+                        self.delegate?.showHideLoading(show: false)
                     } catch(let error) {
                         self.delegate?.showError(error: error.localizedDescription)
+                        self.delegate?.showHideLoading(show: false)
                     }
                 case .failure(let error):
-                    print(error)
+                    self.delegate?.showError(error: error.localizedDescription)
+                    self.delegate?.showHideLoading(show: false)
                 }
             }
         }
