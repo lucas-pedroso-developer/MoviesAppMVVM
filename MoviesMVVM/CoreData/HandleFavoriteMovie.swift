@@ -40,4 +40,13 @@ class HandleFavoriteMovie {
             }
             return true
     }
+    
+    
+    /*func isExist(id: Int) -> Bool {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FavoriteMovie")
+        fetchRequest.predicate = NSPredicate(format: "id = %d", argumentArray: id)
+
+        let res = try! stack.viewContext.fetch(fetchRequest)
+        return res.count > 0 ? true : false
+    }*/
 }

@@ -21,7 +21,7 @@ public class MainViewModel {
     
     func fetch() {
         self.getmovies(url: "\(Constants.BASE_URL)\(Constants.API_KEY)")
-    }   
+    }
     
     public func getmovies(url: String) {
         if !Connectivity.isConnectedToInternet {

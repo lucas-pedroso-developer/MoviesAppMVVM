@@ -13,7 +13,8 @@ extension FavoriteMovie {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<FavoriteMovie> {
         return NSFetchRequest<FavoriteMovie>(entityName: "FavoriteMovie")
     }
-            
+    
+    @NSManaged public var movieId: String?
     @NSManaged public var movieName: String?
     @NSManaged public var movieImage: String?
     @NSManaged public var movieDescription: String?

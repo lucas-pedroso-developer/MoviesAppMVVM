@@ -52,6 +52,18 @@ extension DetailViewController: DetailProtocol {
             }
         }
     }
+    
+    func showError(error: String) {
+        self.showAlert(title: "Erro", message: error)
+    }
+    
+    func hasExist(message: String) {
+        self.showAlert(title: "Aviso", message: message)
+    }
+    
+    func saveSuccess(message: String) {
+        self.showAlert(title: "Sucesso", message: message)
+    }
 }
 
 extension DetailViewController {

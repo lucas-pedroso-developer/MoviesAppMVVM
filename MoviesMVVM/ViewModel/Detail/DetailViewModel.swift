@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 class DetailViewModel {
     
@@ -17,17 +18,73 @@ class DetailViewModel {
     }
     
     func saveFavoriteMovie(movieDetail: MoviesResult) {
+        /*guard let id = movieDetail.id else { return delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente") }
+        guard let name = movieDetail.title else { delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente") }
+        guard let image = movieDetail.backdrop_path else { delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente") }
+        guard let description = movieDetail.overview else { delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente") }
+        guard let date = movieDetail.id else { delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente") }*/
+        
+        var id: Int = 0
+        var name: String = ""
+        var image: String = ""
+        var description: String = ""
+        var date: String = ""
+        
+        if let movieId = movieDetail.id {
+            id = movieId
+            if isExist(id: id) {
+                delegate?.hasExist(message: "Esse filme já é um favorito!")
+                return
+            }
+        } else {
+            delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente")
+        }
+        
+        if let movieName = movieDetail.title {
+            name = movieName
+        } else {
+            delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente")
+        }
+        
+        if let movieImage = movieDetail.backdrop_path {
+            image = movieImage
+        } else {
+            delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente")
+        }
+        
+        if let movieDescription = movieDetail.overview {
+            description = movieDescription
+        } else {
+            delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente")
+        }
+        
+        if let publicationDate = movieDetail.release_date {
+            date = publicationDate
+        } else {
+            delegate?.showError(error: "Ocorreu um erro ao tentar salvar o filme nos favoritos! Tente mais tarde novamente")
+        }
         _ = FavoriteMovie(
-                           movieName: (movieDetail.title)!,
-                           movieImage: (movieDetail.backdrop_path)!,
-                           movieDescription: (movieDetail.overview)!,
-                           publicationDate: (movieDetail.release_date)!,
+                           movieId: String(id),
+                           movieName: name,
+                           movieImage: image,
+                           movieDescription: description,
+                           publicationDate: String(date),
                            context: stack.viewContext)
+        
         do {
             try stack.viewContext.save()
+            delegate?.saveSuccess(message: "Filme favoritado com sucesso!")
         } catch {
             print("error")
         }
+    }
+    
+    func isExist(id: Int) -> Bool {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "FavoriteMovie")
+        fetchRequest.predicate = NSPredicate(format: "movieId = %d", argumentArray: [id])
+        
+        let res = try! stack.viewContext.fetch(fetchRequest)
+        return res.count > 0 ? true : false
     }
     
     func setFieldsData() {

@@ -13,9 +13,10 @@ public class FavoriteMovie: NSManagedObject {
     
     static let name = "FavoriteMovie"
     
-    convenience init(movieName: String, movieImage: String, movieDescription: String, publicationDate: String, context: NSManagedObjectContext) {
+    convenience init(movieId: String, movieName: String, movieImage: String, movieDescription: String, publicationDate: String, context: NSManagedObjectContext) {
         if let ent = NSEntityDescription.entity(forEntityName: FavoriteMovie.name, in: context) {
             self.init(entity: ent, insertInto: context)
+            self.movieId = movieId
             self.movieName = movieName
             self.movieImage = movieImage
             self.movieDescription = movieDescription
